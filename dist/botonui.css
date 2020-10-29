@@ -74,7 +74,7 @@ body{
     background-color: var(--primary);
     width: 2px;
     height: 0%;
-    transition: all .4s;*3SVnYPC&QYku5#
+    transition: all .4s;
 }
 .border_slide_one:hover::after{
     height: 100%;
