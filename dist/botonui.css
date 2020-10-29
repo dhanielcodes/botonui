@@ -2,19 +2,29 @@
 *{
     font-family: 'quicksand', sans-serif;
 }
+:root{
+    --primary: white;
+    --shadow: rgba(0, 0, 0, 0.309);
+}
 *::after, ::before{
     transition: all .4s;
 }
 body{
     background-color: grey;
+    perspective: 100px;
+
 }
 
 /* DEFAULT */
+
 
 .default{
     position: relative;
     transition: all .4s .5s;
     cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
 }
 .default{
     padding: 20px;
@@ -24,23 +34,23 @@ body{
     position: relative;
     transition: all .4s;
     cursor: pointer;
+    outline: none;
 }
 
 /* Radius FULL */
 
-.radius_full::after{
+.norm_full::after{
     content: '';
     position: absolute;
-    width: 50px;
+    width: 10px;
     height: 100%;
-    background-color: aqua;
+    background-color: var(--primary);
     top: 0;
     left: 0;
-    border-radius: 20px;
     transition: all .5s;
     z-index: -1;
 }
-.radius_full:hover::after{
+.norm_full:hover::after{
     width: 100%;
 }
 
@@ -51,7 +61,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     width: 2px;
     height: 0%;
     transition: all .4s;
@@ -61,10 +71,10 @@ body{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     width: 2px;
     height: 0%;
-    transition: all .4s;
+    transition: all .4s;*3SVnYPC&QYku5#
 }
 .border_slide_one:hover::after{
     height: 100%;
@@ -81,7 +91,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     width: 0%;
     height: 2px;
     transition: all .4s;
@@ -91,7 +101,7 @@ body{
     position: absolute;
     bottom: 0;
     right: 0;
-    background-color: rgb(255, 255, 255);
+    background-color:var(--primary);
     width: 0%;
     height: 2px;
     transition: all .4s;
@@ -113,7 +123,7 @@ body{
       position: absolute;
       width: 20%;
       height: 20%;
-      border: 2px solid black;
+      border: 2px solid var(--primary);
       transition: all 0.6s ease;
       border-radius: 2px;
 }
@@ -122,8 +132,8 @@ body{
       right: 0;
       border-top-color: transparent;
       border-left-color: transparent;
-      border-bottom-color: black;
-      border-right-color: black;
+      border-bottom-color: var(--primary);
+      border-right-color: var(--primary);
 }
 
 .type1::before{
@@ -131,8 +141,8 @@ body{
       left: 0;
       border-bottom-color: transparent;
       border-right-color: transparent;
-      border-top-color: black;
-      border-left-color: black;
+      border-top-color: var(--primary);
+      border-left-color: var(--primary);
 }
 .type1:hover:after, .type1:hover:before{
     width: 100%;
@@ -160,23 +170,23 @@ body{
   right: 0;
   border-top-color: transparent;
   border-left-color: transparent;
-  border-bottom-color: black;
-  border-right-color: black;
+  border-bottom-color: var(--primary);
+  border-right-color: var(--primary);
 }
 .type3::before{
   top: 0;
   left: 0;
   border-bottom-color: transparent;
   border-right-color: transparent;
-  border-top-color: black;
-  border-left-color: black;
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
 }
 .type3:hover:after,
 .type3:hover:before{
-  border-bottom-color: black;
-  border-right-color: black;
-  border-top-color: black;
-  border-left-color: black;
+  border-bottom-color: var(--primary);
+  border-right-color: var(--primary);
+  border-top-color: var(--primary);
+  border-left-color: var(--primary);
   width: 100%;
   height: 100%;
 }
@@ -193,7 +203,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color: aquamarine;
+    background-color: var(--primary);
     z-index: -1;
     transition: all .4s;
 }
@@ -210,7 +220,7 @@ body{
     position: absolute;
     bottom: 0;
     left: 0;
-    background-color: aquamarine;
+    background-color: var(--primary);
     z-index: -1;
     transition: all .4s;
 }
@@ -227,7 +237,7 @@ body{
     left: 0;
     width: 0%;
     height: 1px;
-    background-color: white;
+    background-color: var(--primary);
 }
 .slide_fill_top::before{
     content: '';
@@ -236,7 +246,7 @@ body{
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: white;
+    background-color: var(--primary);
     opacity: 0;
 }
 .slide_fill_top:hover::after{
@@ -256,7 +266,7 @@ body{
     left: 0;
     width: 0%;
     height: 1px;
-    background-color: white;
+    background-color: var(--primary);
 }
 .slide_fill_bottom::before{
     content: '';
@@ -265,7 +275,7 @@ body{
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: white;
+    background-color: var(--primary);
     opacity: 0;
 }
 .slide_fill_bottom:hover::after{
@@ -287,7 +297,7 @@ body{
     left: 0;
     top: 0;
     width: 0%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     height: 100%;
     z-index: -1;
 }
@@ -297,7 +307,7 @@ body{
     right: 0;
     top: 0;
     width: 0%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     height: 100%;
     z-index: -1;
 }
@@ -312,7 +322,7 @@ body{
     left: 0;
     top: 0;
     width: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     height: 100%;
     z-index: -1;
 }
@@ -322,10 +332,61 @@ body{
     right: 0;
     top: 0;
     width: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--primary);
     height: 100%;
     z-index: -1;
 }
 .close_out:hover::after, .close_out:hover::before{
     width: 0%;
+}
+
+/* CLiP path */
+.clip_path::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: circle(0px);
+}
+.clip_path:hover::after{
+    clip-path: circle(100%);
+}
+
+
+/* MINIMAL */
+
+/* scale */
+ .scale_type{
+    background: var(--primary);
+}
+
+.scale_type:hover{
+    transform: scale(1.1);
+    transform-style: preserve-3d;
+    box-shadow: 0px 0px 30px var(--shadow);
+}
+
+/* rotate */
+.rotate_one{
+    background: var(--primary);
+}
+.rotate_one:hover{
+    transform: rotate(10deg);
+}
+.rotate_two{
+    background: var(--primary);
+}
+.rotate_two:hover{
+    transform: rotate(-10deg);
+}
+.rotate_three{
+    background: var(--primary);
+}
+.rotate_three:hover{
+    transform-style: preserve-3d;
+    transform: rotate3d(1, -1, 0, 5deg);
 }
