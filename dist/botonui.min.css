@@ -27,9 +27,8 @@ body{
     outline: none;
 }
 .default{
-    padding: 20px;
+    padding: 20px 30px;
     margin: 10px;
-    width: 150px;
     text-align: center;
     position: relative;
     transition: all .4s;
@@ -388,5 +387,59 @@ body{
 }
 .rotate_three:hover{
     transform-style: preserve-3d;
-    transform: rotate3d(1, -1, 0, 5deg);
+    transform: rotate3d(-1, 1, 0, 2deg);
+    box-shadow: 0px 0px 30px var(--shadow);
 }
+
+/* SLICE */
+
+.slice_one, .slice_two, .slice_three, .slice_four{
+    border: 2px solid var(--primary);
+    overflow: hidden;
+}
+
+.slice_one::before, .slice_two::before, .slice_three::before, .slice_four::before{
+    background: var(--primary);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.slice_one::before{
+    width: 0%;
+    height: 100%;
+  }
+  
+  .slice_one:hover::before{
+    width: 100%;
+  }
+  
+  
+  .slice_two::before{
+    width: 100%;
+    height: 0%;
+  }
+  .slice_two:hover::before{
+    height: 100%;
+  }
+  
+  .slice_three::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  .slice_three:hover::before{
+    height: 380%;
+  }
+  
+  .slice_four::before{
+    width: 100%;
+    height: 0%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  .slice_four:hover::before{
+    height: 380%;
+  }
+  
