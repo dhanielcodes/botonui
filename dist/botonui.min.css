@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*{
+    font-family: 'quicksand', sans-serif;
+}
+*::after, ::before{
+    transition: all .4s;
+}
+body{
+    background-color: grey;
+}
+
+/* DEFAULT */
+
+.default{
+    position: relative;
+    transition: all .4s .5s;
+    cursor: pointer;
+}
+.default{
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+/* Radius FULL */
+
+.radius_full::after{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    transition: all .5s;
+    z-index: -1;
+}
+.radius_full:hover::after{
+    width: 100%;
+}
+
+/* Border Slide */
+
+.border_slide_one::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+    height: 0%;
+    transition: all .4s;
+}
+.border_slide_one::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    width: 2px;
+    height: 0%;
+    transition: all .4s;
+}
+.border_slide_one:hover::after{
+    height: 100%;
+    z-index: -1;
+}
+.border_slide_one:hover::before{
+    height: 100%;
+    z-index: -1;
+}
+
+
+.border_slide_two::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 2px;
+    transition: all .4s;
+}
+.border_slide_two::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    width: 0%;
+    height: 2px;
+    transition: all .4s;
+}
+.border_slide_two:hover::after, .border_slide_two:hover::before{
+    width: 100%;
+    z-index: -1;
+}
+
+
+/* Type */
+
+.type1{
+    color: black
+}
+.type1::after,.type1::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20%;
+      height: 20%;
+      border: 2px solid black;
+      transition: all 0.6s ease;
+      border-radius: 2px;
+}
+.type1::after{
+      bottom: 0;
+      right: 0;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      border-bottom-color: black;
+      border-right-color: black;
+}
+
+.type1::before{
+      top: 0;
+      left: 0;
+      border-bottom-color: transparent;
+      border-right-color: transparent;
+      border-top-color: black;
+      border-left-color: black;
+}
+.type1:hover:after, .type1:hover:before{
+    width: 100%;
+    height: 100%;
+}
+
+/* ANODER ONE */
+.type3{
+    color: black
+}
+
+.type3::after,
+.type3::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  border: 2px solid;
+  transition: all 0.6s ease;
+  border-radius: 2px;
+}
+.type3::after{
+  bottom: 0;
+  right: 0;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: black;
+  border-right-color: black;
+}
+.type3::before{
+  top: 0;
+  left: 0;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-top-color: black;
+  border-left-color: black;
+}
+.type3:hover:after,
+.type3:hover:before{
+  border-bottom-color: black;
+  border-right-color: black;
+  border-top-color: black;
+  border-left-color: black;
+  width: 100%;
+  height: 100%;
+}
+
+/* Drop */
+.drop_top, .drop_bottom{
+    border: 1px solid white;
+}
+.drop_top::after{
+    content: '';
+    width: 100%;
+    border-radius: 0px 0px 300px 300px;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aquamarine;
+    z-index: -1;
+    transition: all .4s;
+}
+.drop_top:hover::after{
+    height: 100%;
+    border-radius: 0px;
+}
+
+.drop_bottom::after{
+    content: '';
+    width: 100%;
+    border-radius: 300px 300px 0px 0px;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: aquamarine;
+    z-index: -1;
+    transition: all .4s;
+}
+.drop_bottom:hover::after{
+    height: 100%;
+    border-radius: 0px;
+}
+
+/* Slide fill */
+.slide_fill_top::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+}
+.slide_fill_top::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0;
+}
+.slide_fill_top:hover::after{
+    width: 100%;
+}
+.slide_fill_top:hover::before{
+    height: 100%;
+    opacity: 1;
+    transition-delay: .4s;
+    z-index: -1;
+}
+
+.slide_fill_bottom::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+}
+.slide_fill_bottom::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    opacity: 0;
+}
+.slide_fill_bottom:hover::after{
+    width: 100%;
+}
+.slide_fill_bottom:hover::before{
+    height: 100%;
+    opacity: 1;
+    transition-delay: .4s;
+    z-index: -1;
+}
+
+
+/* Close in */
+
+.close_in::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    z-index: -1;
+}
+.close_in::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    z-index: -1;
+}
+.close_in:hover::after, .close_in:hover::before{
+    width: 50%;
+}
+
+
+.close_out::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    z-index: -1;
+}
+.close_out::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+    z-index: -1;
+}
+.close_out:hover::after, .close_out:hover::before{
+    width: 0%;
+}
