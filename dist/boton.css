@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 *{
     font-family: 'quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 :root{
     --primary: white;
@@ -26,7 +29,7 @@ body{
     border: none;
     outline: none;
 }
-.default{
+.default2{
     padding: 20px 30px;
     margin: 10px;
     text-align: center;
@@ -34,6 +37,8 @@ body{
     transition: all .4s;
     cursor: pointer;
     outline: none;
+    background: none;
+    border: none;
 }
 
 /* Radius FULL */
@@ -111,7 +116,7 @@ body{
 }
 
 
-/* Type */
+/* Type one */
 
 .type1{
     color: black
@@ -148,13 +153,13 @@ body{
     height: 100%;
 }
 
-/* ANODER ONE */
-.type3{
+/* Type three */
+.type2{
     color: black
 }
 
-.type3::after,
-.type3::before{
+.type2::after,
+.type2::before{
   content: '';
   display: block;
   position: absolute;
@@ -164,7 +169,7 @@ body{
   transition: all 0.6s ease;
   border-radius: 2px;
 }
-.type3::after{
+.type2::after{
   bottom: 0;
   right: 0;
   border-top-color: transparent;
@@ -172,7 +177,7 @@ body{
   border-bottom-color: var(--primary);
   border-right-color: var(--primary);
 }
-.type3::before{
+.type2::before{
   top: 0;
   left: 0;
   border-bottom-color: transparent;
@@ -180,8 +185,8 @@ body{
   border-top-color: var(--primary);
   border-left-color: var(--primary);
 }
-.type3:hover:after,
-.type3:hover:before{
+.type2:hover:after,
+.type2:hover:before{
   border-bottom-color: var(--primary);
   border-right-color: var(--primary);
   border-top-color: var(--primary);
@@ -443,3 +448,91 @@ body{
     height: 380%;
   }
   
+
+  /* NAVIGATION */
+
+  /* Nav one */
+  .boton_nav_one{
+      display: flex;
+      justify-content: space-between;
+      margin: 10px;
+      padding: 5px;
+      align-items: center;
+      border: 2px solid var(--primary);
+  }
+  .boton_nav_one_right{
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      margin: auto;
+      list-style: none;
+  }
+
+  /* Nav two */
+
+  .boton_nav_two{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+    border: 2px solid var(--primary);
+}
+.boton_nav_two_right{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+
+/* Nav three */
+.boton_nav_three{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+    border: 2px solid var(--primary);
+}
+.boton_nav_three_right{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    list-style: none;
+}
+
+
+/* Nav four */
+
+.boton_nav_four{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 5px;
+    align-items: center;
+    border: 2px solid var(--primary);
+}
+.boton_nav_four_right{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    margin-right: auto;
+    list-style: none;
+}
+
+
+  @media screen and (max-width: 500px){
+      .boton_nav_one, .boton_nav_two, .boton_nav_four{
+          flex-direction: column;
+      }
+      .boton_nav_one_right, .boton_nav_two_right, .boton_nav_four_right{
+          width: 100%;
+      }
+      .boton_nav_three{
+        flex-direction: column-reverse;
+    }
+    .boton_nav_one_three{
+        width: 100%;
+    }
+  }
