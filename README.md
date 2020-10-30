@@ -11,6 +11,8 @@ Get amazing button and hover styles for your website and webapp UIs.
 ```
 <link rel="stylesheet" href="https://cdn.statically.io/gh/devdanielcodes/botonui/main/dist/botonui.css">
 ```
-### Check Out the docs at <a href="https://boton.vercel.app/docs">Boton</a>
+### Check Out the docs at <a href="https://boton.vercel.app/docs" target="_blank">Boton</a>
+
+### <a href="https://boton.vercel.app/docs" target="_blank">Website Repo</a>
 
 Open Source project
